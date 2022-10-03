@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+
+
+
+.product-card-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+    
+}
+
+
+.card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: 400px;
+    overflow: hidden;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+
+.card > figure > img {
+    width: 90%;
+}
+
+
+.details > .min-details {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.details {
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 80%;
+    width: 90%;
+    transition: box-shadow .3s ease-in-out,
+                top .3s ease-in-out;
+} 
+
+#description {
+  
+    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  }
+
+.card:hover .details {
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+    top: 40%;
+
+}
+
+
+.details > .min-details > h1 > span {
+    color: #7B7B7B;
+    display: block;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+
+.btn {
+    margin-left: 17px;
+    background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 90%;
+    align-self: center;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+
+
