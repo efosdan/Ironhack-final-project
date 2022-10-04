@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import ProductCard from "./ProductCard";
 
@@ -53,14 +53,15 @@ const allProducts = [
   },
 ];
 
-function Products() {
+function Products({ handleClick }) {
+  
   return (
     <main className="product-card-wrapper">
       {allProducts.map((product) => {
         return (
           <div key={product.id}>
             <h2>Pasta dela villa</h2>
-            <ProductCard product={product} />
+            <ProductCard product={product} handleClick = {handleClick} />
           </div>
         );
       })}
