@@ -60,13 +60,13 @@ const allProducts = [
 ];
 
 function Products({ handleClick }) {
-  
   return (
     <main className="product-card-wrapper">
       {allProducts.map((product) => {
         return (
           <div key={product.id}>
-            <ProductCard product={product} handleClick = {handleClick} />
+            <ProductCard product={product} handleClick = {handleClick} /
+
           </div>
         );
       })}
