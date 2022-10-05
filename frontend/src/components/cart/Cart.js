@@ -52,7 +52,7 @@ function Cart({ cart, setCart, handleChange }) {
         ))}
         <div className="total">
            <span>Total Price Of Your Cart</span>
-           <span>$ - {totalPrice} </span>  
+           <span>$  {totalPrice} </span>  
         </div>    
     </article>
   )
