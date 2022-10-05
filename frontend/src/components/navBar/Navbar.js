@@ -25,13 +25,31 @@ const Logo = styled.h1`
   display: flex;
   text-align: center;
   border: none;
-  cursor: pointer;
 `;
 
 const Center = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+`;
+
+const Language = styled.span`
+  font-size: 16px;
+  cursor: pointer;
+`;
+
+const SearchContainer = styled.div`
+    border: 5px solid white;
+    display: flex;
+    align-items: center
+    margin-left: 20px;
+    padding: 5px;
+    color: black;
+    
+`;
+const Input = styled.input`
+  border: none;
+  background-color: lightgrey;
 `;
 
 const Right = styled.div`
@@ -46,25 +64,26 @@ const MenuItem = styled.div`
   margin-left: 20px;
 `;
 
-const Navbar = ({ setShow, size }) => {
+const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Logo onClick={() => setShow(true)}>PASTA</Logo>
+          <Logo>PASTA</Logo>
         </Left>
-
+        <Center>
+          <Language>EN</Language>
+          <SearchContainer>
+            <Input />
+            <Search />
+          </SearchContainer>
+        </Center>
         <Right>
           <MenuItem>CONTACT US</MenuItem>
-          <a href="./signup-login/SignUpForm" />
           <MenuItem>SING UP</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
-            <Badge
-              badgeContent={size}
-              color="primary"
-              onClick={() => setShow(false)}
-            >
+            <Badge badgeContent={1} color="primary">
               <ShoppingCartOutlinedIcon />
             </Badge>
           </MenuItem>
