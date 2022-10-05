@@ -15,7 +15,7 @@ function ProductCard({ product }) {
                 <button>add to cart</button>
               </span> */}
             </h1>
-            <h1 className="price">{product.price}</h1>
+            <h1 className="price">$ {product.price}</h1>
           </div>
 
           <div className="options">

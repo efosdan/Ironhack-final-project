@@ -88,6 +88,16 @@ const Navbar = () => {
              </SearchContainer>
          </Center>
         <Right>
+<<<<<<< HEAD
+          <MenuItem>CONTACT US</MenuItem>
+          <MenuItem>SIGN UP</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={1} color="primary">
+              <ShoppingCartOutlinedIcon />
+            </Badge>
+          </MenuItem>
+=======
             <MenuItem>CONTACT US</MenuItem>
             <MenuItem>SING UP</MenuItem>
             <MenuItem>SIGN IN</MenuItem>
@@ -96,6 +106,7 @@ const Navbar = () => {
                     <ShoppingCartOutlinedIcon />
                 </Badge>
             </MenuItem>
+>>>>>>> 96f5cc494785f42ecb782aa3ca199ace1babbef1
         </Right>
       </Wrapper>
     </Container>
