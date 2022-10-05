@@ -80,7 +80,7 @@ const Navbar = () => {
         </Center>
         <Right>
           <MenuItem>CONTACT US</MenuItem>
-          <MenuItem>SING UP</MenuItem>
+          <MenuItem>SIGN UP</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>
             <Badge badgeContent={1} color="primary">
