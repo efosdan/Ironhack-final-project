@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import { Badge } from '@mui/material';
 import styled from 'styled-components';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -26,7 +26,6 @@ const Logo = styled.h1 `
     display: flex;
     text-align: center;
     border: none;
-    cursor: pointer;
 `;
 
 
@@ -72,12 +71,12 @@ const MenuItem = styled.div `
     margin-left: 20px;
 `;
 
-const Navbar = ({ setShow, size } ) => {
+const Navbar = () => {
   return (
     <Container>
       <Wrapper> 
         <Left> 
-            <Logo onClick={() => setShow(true)}>PASTA</Logo> 
+            <Logo>PASTA</Logo> 
         </Left>
         <Center>
             <Language>
@@ -89,14 +88,25 @@ const Navbar = ({ setShow, size } ) => {
              </SearchContainer>
          </Center>
         <Right>
+<<<<<<< HEAD
+          <MenuItem>CONTACT US</MenuItem>
+          <MenuItem>SIGN UP</MenuItem>
+          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={1} color="primary">
+              <ShoppingCartOutlinedIcon />
+            </Badge>
+          </MenuItem>
+=======
             <MenuItem>CONTACT US</MenuItem>
             <MenuItem>SING UP</MenuItem>
             <MenuItem>SIGN IN</MenuItem>
             <MenuItem>
-                <Badge badgeContent={size} color="primary" onClick={() => setShow(false)}>
+                <Badge badgeContent={1} color="primary">
                     <ShoppingCartOutlinedIcon />
                 </Badge>
             </MenuItem>
+>>>>>>> 96f5cc494785f42ecb782aa3ca199ace1babbef1
         </Right>
       </Wrapper>
     </Container>
