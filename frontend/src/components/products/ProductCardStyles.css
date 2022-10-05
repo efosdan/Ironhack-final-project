@@ -50,7 +50,7 @@
     border-radius: 15px;
     padding: 20px;
     position: absolute;
-    top: 80%;
+    top: 75%;
     width: 90%;
     transition: box-shadow .3s ease-in-out,
                 top .3s ease-in-out;
