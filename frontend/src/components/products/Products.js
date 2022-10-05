@@ -59,7 +59,6 @@ function Products() {
       {allProducts.map((product) => {
         return (
           <div key={product.id}>
-            <h2>Pasta dela villa</h2>
             <ProductCard product={product} />
           </div>
         );
