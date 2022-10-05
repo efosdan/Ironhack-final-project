@@ -1,7 +1,10 @@
 import React from "react";
 import "./ProductCardStyles.css";
+import { useState } from "react";
+
 
 function ProductCard({ product, handleClick }) {
+
   return (
     <div>
       <div className="card">
