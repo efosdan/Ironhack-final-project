@@ -59,8 +59,12 @@ function Products() {
       {allProducts.map((product) => {
         return (
           <div key={product.id}>
+<<<<<<< HEAD
+            <ProductCard product={product} handleClick = {handleClick} />
+=======
             <h2>Pasta dela villa</h2>
             <ProductCard product={product} />
+>>>>>>> efc80228108fdf50b2f3dc7edb9aa4539f56e958
           </div>
         );
       })}
