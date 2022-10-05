@@ -1,7 +1,10 @@
 import React from "react";
 import "./ProductCardStyles.css";
+import { useState } from "react";
 
-function ProductCard({ product }) {
+
+function ProductCard({ product, handleClick }) {
+
   return (
     <div>
       <div className="card">
@@ -21,7 +24,7 @@ function ProductCard({ product }) {
           <div className="options">
             <p id="description">{product.description}</p>
           </div>
-          <a href="#" className="btn">
+          <a onClick={() => handleClick(product)} href="#" className="btn">
             add to cart
           </a>
         </section>
