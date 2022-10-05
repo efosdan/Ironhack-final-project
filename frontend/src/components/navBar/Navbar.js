@@ -90,7 +90,7 @@ const Navbar = ({ setShow, size } ) => {
          </Center>
         <Right>
             <MenuItem>CONTACT US</MenuItem>
-            <MenuItem>SING UP</MenuItem>
+            <MenuItem>SIGN UP</MenuItem>
             <MenuItem>SIGN IN</MenuItem>
             <MenuItem>
                 <Badge badgeContent={size} color="primary" onClick={() => setShow(false)}>
