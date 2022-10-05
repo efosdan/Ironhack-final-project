@@ -41,18 +41,18 @@ function Cart({ cart, setCart, handleChange }) {
           </div>           
           <div>
             <button onClick={() => handleChange(product, 1)}>+</button>
-            <button>{product.qty} </button> 
+            <button> {product.qty} </button> 
             <button onClick={() => handleChange(product, -1)}>-</button>
           </div> 
           <div>
-            <span>{displayPrices.length !== 0 && displayPrices[index].displayPrice}</span>
+            <span>$ {displayPrices.length !== 0 && displayPrices[index].displayPrice}</span>
             <button onClick={() => handleRemove(product.id)}>Remove</button>
           </div>
           </div>
         ))}
         <div className="total">
            <span>Total Price Of Your Cart</span>
-           <span>$ - {totalPrice} </span>  
+           <span>$  {totalPrice} </span>  
         </div>    
     </article>
   )
