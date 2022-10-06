@@ -4,9 +4,9 @@ const mongoose = require("mongoose");
 const Product = require("../models/Product.model");
 
 router.post("/products", (req, res, next) => {
-  const { name, description, price } = req.body;
+  const { name, price, description, qty, img } = req.body;
 
-  Product.create({ name, description, price })
+  Product.create({ name, price, description, qty, img })
     .then((response) => res.json(response))
     .catch((err) => res.json(err));
 });
