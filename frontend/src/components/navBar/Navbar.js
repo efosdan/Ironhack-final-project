@@ -13,7 +13,6 @@ const Wrapper = styled.div `
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 `;
 
 const Left = styled.div `
@@ -55,7 +54,6 @@ const SearchContainer = styled.div `
 const Input = styled.input `
     border: none;
     background-color: lightgrey;
-
 `;
 
 

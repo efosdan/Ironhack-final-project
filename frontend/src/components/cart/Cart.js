@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./CartStyles.css"
+// import "./CartStyles.css"
 
 
 function Cart({ cart, setCart, handleChange }) {
@@ -41,11 +41,11 @@ function Cart({ cart, setCart, handleChange }) {
           </div>           
           <div>
             <button onClick={() => handleChange(product, 1)}>+</button>
-            <button>{product.qty} </button> 
+            <button> {product.qty} </button> 
             <button onClick={() => handleChange(product, -1)}>-</button>
           </div> 
           <div>
-            <span>{displayPrices.length !== 0 && displayPrices[index].displayPrice}</span>
+            <span>$ {displayPrices.length !== 0 && displayPrices[index].displayPrice}</span>
             <button onClick={() => handleRemove(product.id)}>Remove</button>
           </div>
           </div>
