@@ -21,7 +21,7 @@ function ProductCard({ product }) {
           <div className="options">
             <p id="description">{product.description}</p>
           </div>
-          <a href="#" className="btn">
+          <a href="" className="btn">
             add to cart
           </a>
         </section>
