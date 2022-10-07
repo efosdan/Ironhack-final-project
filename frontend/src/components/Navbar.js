@@ -11,8 +11,9 @@ const Container = styled.div`
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 const Left = styled.div`
@@ -23,7 +24,7 @@ const Left = styled.div`
 const Logo = styled.h1`
   font-weight: bold;
   display: flex;
-  text-align: center;
+  text-align: left;
   border: none;
   cursor: pointer;
 `;
@@ -70,7 +71,7 @@ const Navbar = ({ setShow, size }) => {
     <Container>
       <Wrapper>
         <Left>
-          <Logo onClick={() => setShow(true)}>PASTA</Logo>
+          <Logo onClick={() => setShow(true)}>PASTA VILLA</Logo>
         </Left>
         <Center>
           <Language>EN</Language>
@@ -80,10 +81,15 @@ const Navbar = ({ setShow, size }) => {
           </SearchContainer>
         </Center>
         <Right>
-          <MenuItem>CONTACT US</MenuItem>
-          <MenuItem>SIGN UP</MenuItem>
           <MenuItem>
-            <a href="/signup">SIGN IN</a>
+            <a href="/">HOME</a>
+          </MenuItem>
+          <MenuItem>
+            {" "}
+            <a href="/login">SIGN IN</a>
+          </MenuItem>
+          <MenuItem>
+            <a href="/signup">SIGN UP</a>
           </MenuItem>
           <MenuItem>
             <Badge
