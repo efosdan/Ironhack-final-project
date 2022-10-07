@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 
 const API_URL = "http://localhost:5005";
 
-function AllProducts() {
+function AllProducts({ handleClick }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -20,8 +20,8 @@ function AllProducts() {
     <main className="product-card-wrapper">
       {products.map((product) => {
         return (
-          <div key={product.id}>
-            <ProductCard product={product} />
+          <div key={product._id}>
+            <ProductCard product={product} handleClick={handleClick} />
           </div>
         );
       })}

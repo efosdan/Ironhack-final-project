@@ -21,7 +21,7 @@ function ProductCard({ product, handleClick }) {
           <div className="options">
             <p id="description">{product.description}</p>
           </div>
-          <a onClick={() => handleClick(product)} href="#" className="btn">
+          <a onClick={() => handleClick(product)} href="#/" className="btn">
             add to cart
           </a>
         </section>

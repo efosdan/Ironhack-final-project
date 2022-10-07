@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./CartStyles.css";
 
-function Cart({ cart, setCart, handleChange }) {
+function Cart({ cart, setCart, handleChange, c }) {
   const [price, setPrice] = useState(0);
   const [displayPrices, setDisplayPrices] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -56,7 +57,35 @@ function Cart({ cart, setCart, handleChange }) {
       ))}
       <div className="total">
         <span>Total Price Of Your Cart</span>
-        <span>$ {totalPrice} </span>
+        <span>$ {totalPrice}</span>
+
+        <div>
+          <form
+            method="POST"
+            action="https://checkout.flutterwave.com/v3/hosted/pay"
+          >
+            <div> </div>
+            <input
+              type="hidden"
+              name="public_key"
+              value="FLWPUBK_TEST-SANDBOXDEMOKEY-X"
+            />
+            <input
+              type="hidden"
+              name="customer[email]"
+              value="order@pastavila.com"
+            />
+            <input type="hidden" name="customer[name]" value="Jesse Pinkman" />
+            <input type="hidden" name="tx_ref" value="bitethtx-019203" />
+            <input type="hidden" name="amount" value={totalPrice} />
+            <input type="hidden" name="currency" value="USD" />
+            <input type="hidden" name="meta[token]" value="54" />
+            <input type="hidden" name="redirect_url" value="" />
+            <button type="submit" id="start-payment-button">
+              Pay Now
+            </button>
+          </form>
+        </div>
       </div>
     </article>
   );

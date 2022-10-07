@@ -13,7 +13,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartQuantity, setCartQuantity] = useState(0);
 
-  const handleClick = (product) => {
+  const handleClick = (product, e) => {
     if (cart.indexOf(product) !== -1) return;
     product.qty = 1;
     setCart([...cart, product]);
@@ -38,18 +38,11 @@ function App() {
   return (
     <div className="App">
       <Navbar setShow={setShow} size={cartQuantity} />
-      <Routes>
-        <Route path="/" element={<AllProducts handleClick={handleClick} />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/product/new" element={<AddProduct />} />
-        <Route
-          path="/cart"
-          element={
-            <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
-          }
-        />
-      </Routes>
+      {show ? (
+        <AllProducts handleClick={handleClick} />
+      ) : (
+        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+      )}
     </div>
   );
 }
